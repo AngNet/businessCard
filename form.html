@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>aboutme</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="css/form.css" rel="stylesheet">
+  <style>
+    form :focus:required:invalid {
+      border-color: #a94442;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <header>
+    <h1>WhoAreYou?</h1>
+  </header>
+
+  <section>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form user-form="form">
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input class="form-control" name="firstName" id="firstName" autofocus placeholder="Bob" required pattern="[a-zA-Z\s]+">
+          </div>
+          <div class="form-group">
+            <label for="name">Last Name</label>
+            <input class="form-control" type="lastName" name="lastName" id="lastName" value="" placeholder="Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="location">Where do you live?</label>
+            <input class="form-control" type="address" name="location" id="location" value="" placeholder="city, state, country" required>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="emailAddress" name="email" id="emailInput" value="" placeholder="someone@here.com" required>
+          </div>
+
+          <label for="gender">Gender</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" value="male">
+              Male
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" value="female">
+              Female
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="occupation">Occupation</label>
+            <select id="occupation" class="form-control" name="occupation">
+              <option value="">None</option>
+              <option value="student">Student</option>
+              <option value="designer">Designer</option>
+              <option value="writer">Writer</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="editor">Editor</option>
+              <option value="artist">Artist</option>
+              <option value="wanderer">Wanderer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="profilePic">Add a photo of yourself</label>
+            <input class="upload" type="file" id="imgInp" />
+            <br>
+            <img style="width:200px" id="blah" src="#" alt="Preview image" />
+          </div>
+
+          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="reset" class="btn btn-default">Reset</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>Current Info:</h4>
+        <div user-form="checklist">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="blog-footer">
+   <p>
+     <a href="#">Back to top</a>
+   </p>
+ </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/validation.js" charset="utf-8"></script>
+  <script src="scripts/checklist.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,97 +1,104 @@
+
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<head>
-  <meta charset="utf-8">
-  <title>aboutme</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-  <style>
-    form :focus:required:invalid {
-      border-color: #a94442;
-    }
-  </style>
-</head>
+    <title>Carousel Template for Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
 
-<body class="container">
-  <header>
-    <h1>WhoAreYou?</h1>
-  </header>
-  <section>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <form user-form="form">
-          <div class="form-group">
-            <label for="name">First Name</label>
-            <input class="form-control" name="firstName" id="firstName" autofocus placeholder="Bob" required pattern="[a-zA-Z\s]+">
-          </div>
-          <div class="form-group">
-            <label for="name">Last Name</label>
-            <input class="form-control" type="lastName" name="lastName" id="lastName" value="" placeholder="Smith" required>
-          </div>
-          <div class="form-group">
-            <label for="location">Where do you live?</label>
-            <input class="form-control" type="address" name="location" id="location" value="" placeholder="city, state, country" required>
-          </div>
-          <div class="form-group">
-            <label for="emailInput">Email</label>
-            <input class="form-control" type="emailAddress" name="email" id="emailInput" value="" placeholder="someone@here.com" required>
-          </div>
-
-          <label for="gender">Gender</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="gender" value="male">
-              Male
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="gender" value="female">
-              Female
-            </label>
-          </div>
-          <div class="form-group">
-            <label for="occupation">Occupation</label>
-            <select id="occupation" class="form-control" name="occupation">
-              <option value="">None</option>
-              <option value="student">Student</option>
-              <option value="designer">Designer</option>
-              <option value="writer">Writer</option>
-              <option value="volunteer">Volunteer</option>
-              <option value="editor">Editor</option>
-              <option value="artist">Artist</option>
-              <option value="wanderer">Wanderer</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="profilePic">Add a photo of yourself</label>
-            <input class="upload" type="file" id="imgInp" />
-            <br>
-            <img style="width:200px" id="blah" src="#" alt="Preview image" />
-          </div>
-
-          <button type="submit" class="btn btn-default">Submit</button>
-          <button type="reset" class="btn btn-default">Reset</button>
-        </form>
-      </div>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal"><a href = "index.html">WhoIAm</a></h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="login.html">Log in</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="signup.html">Sign up</a>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h4>Pending Orders:</h4>
-        <div user-form="checklist">
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Tell the world who you are!</h1>
+          <p class="lead text-muted">We're all different and unique, but what better way to express yourself than to create your own business card in the form of a website? Create your own personalize webpage in just three easy steps. </p>
+          <p>
+            <a class="btn btn-primary my-2" href="Register.html">Sign up Now!</a>
+          </p>
+        </div>
+      </section>
+
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="img/pic1.jpeg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Easy to create</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="img/pic2.jpeg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Different ways to express yourself</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="img/pic3.jpeg" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>It's all up to you</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+      <div class="container marketing">
+        <h2 class = "mainText">Easy as 1, 2, 3</h2>
+        <hr class="featurette-divider">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/person.png" alt="Generic placeholder image" width="100" height="100">
+            <h2>1. Create an Account</h2>
+          </div>
+          <div class="col-lg-4">
+            <img src="img/form.png" alt="Generic placeholder image" width="100" height="100">
+            <h2>2. Fill in your info</h2>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/plus.png" alt="Generic placeholder image" width="100" height="100">
+            <h2>3. Share to the world</h2>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-  <script src="scripts/validation.js" charset="utf-8"></script>
-  <script src="scripts/checklist.js" charset="utf-8"></script>
-  <script src="scripts/formhandler.js" charset="utf-8"></script>
-  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
-  <script src="scripts/datastore.js" charset="utf-8"></script>
-  <script src="scripts/truck.js" charset="utf-8"></script>
-  <script src="scripts/main.js" charset="utf-8"></script>
-</body>
 
+      <footer class="index-footer">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2018 TeamPartyHouse</p>
+      </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
