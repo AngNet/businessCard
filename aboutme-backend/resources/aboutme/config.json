@@ -48,6 +48,14 @@
 			"required": false,
 			"id": "occupation",
 			"order": 5
+		},
+		"username": {
+			"name": "username",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "username",
+			"order": 6
 		}
 	}
 }
