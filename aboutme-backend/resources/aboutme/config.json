@@ -25,21 +25,13 @@
 			"id": "location",
 			"order": 2
 		},
-		"email": {
-			"name": "email",
-			"type": "string",
-			"typeLabel": "string",
-			"required": true,
-			"id": "email",
-			"order": 3
-		},
 		"gender": {
 			"name": "gender",
 			"type": "string",
 			"typeLabel": "string",
 			"required": true,
 			"id": "gender",
-			"order": 4
+			"order": 3
 		},
 		"occupation": {
 			"name": "occupation",
@@ -47,7 +39,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "occupation",
-			"order": 5
+			"order": 4
 		},
 		"username": {
 			"name": "username",
@@ -55,7 +47,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "username",
-			"order": 6
+			"order": 5
 		}
 	}
 }

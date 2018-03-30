@@ -17,20 +17,20 @@
 			"id": "emailAddress",
 			"order": 1
 		},
-		"password": {
-			"name": "password",
+		"pwd": {
+			"name": "pwd",
 			"type": "string",
 			"typeLabel": "string",
 			"required": true,
-			"id": "password",
+			"id": "pwd",
 			"order": 2
 		},
-		"confirmPassword": {
-			"name": "confirmPassword",
+		"pwd2": {
+			"name": "pwd2",
 			"type": "string",
 			"typeLabel": "string",
 			"required": true,
-			"id": "confirmPassword",
+			"id": "pwd2",
 			"order": 3
 		}
 	}

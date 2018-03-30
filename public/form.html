@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>aboutme</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="css/form.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
   <style>
     form :focus:required:invalid {
       border-color: #a94442;
@@ -34,11 +36,6 @@
             <label for="location">Where do you live?</label>
             <input class="form-control" type="address" name="location" id="location" value="" placeholder="city, state, country" required>
           </div>
-          <div class="form-group">
-            <label for="emailInput">Email</label>
-            <input class="form-control" type="emailAddress" name="email" id="emailInput" value="" placeholder="someone@here.com" required>
-          </div>
-
           <label for="gender">Gender</label>
           <div class="radio">
             <label>
@@ -67,40 +64,33 @@
           </div>
           <div class="form-group">
             <label for="profilePic">Add a photo of yourself</label>
-            <input class="upload" type="file" id="imgInp" />
+            <input class="upload" type="file" id="imgInp" onchange="setFiles(this)" />
             <br>
             <img style="width:200px" id="blah" src="#" alt="Preview image" />
           </div>
 
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" onclick="uploadFiles()" class="btn btn-default">Submit</button>
           <button type="reset" class="btn btn-default">Reset</button>
         </form>
       </div>
     </div>
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h4>Current Info:</h4>
-        <div user-form="checklist">
-        </div>
-      </div>
-    </div>
   </section>
 
-  <footer class="blog-footer">
-   <p>
-     <a href="#">Back to top</a>
-   </p>
- </footer>
-
+  <footer class="index-footer">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2018 TeamPartyHouse</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-  <script src="scripts/validation.js" charset="utf-8"></script>
-  <script src="scripts/checklist.js" charset="utf-8"></script>
-  <script src="scripts/formhandler.js" charset="utf-8"></script>
-  <script src="scripts/remotedatastore.js" charset="utf-8"></script>
-  <script src="scripts/datastore.js" charset="utf-8"></script>
-  <script src="scripts/truck.js" charset="utf-8"></script>
-  <script src="scripts/main.js" charset="utf-8"></script>
+  <script src="js/formhandler.js" charset="utf-8"></script>
+  <script src="js/remotedatastore.js" charset="utf-8"></script>
+  <script src="js/truck.js" charset="utf-8"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="http://localhost:2403/dpd.js"></script>
+  <script type="text/javascript" src="js/upload.js"></script>
+  <script src="js/main.js" charset="utf-8"></script>
 </body>
 
 </html>

@@ -14,23 +14,6 @@
     }
   }
 
-  /* handles getting the pic from user */
-  function readURL(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-
-      reader.onload = function(e) {
-        $("#blah").attr("src", e.target.result);
-      };
-
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
-
-  $("#imgInp").change(function() {
-    readURL(this);
-  });
-
   FormHandler.prototype.addSubmitHandler = function(fn) {
     /* eslint-disable no-console */
     console.log("Setting submit handler for form");
@@ -49,21 +32,6 @@
       fn(data);
       this.reset();
       this.elements[0].focus();
-    });
-  };
-
-  FormHandler.prototype.addInputHandler = function(fn) {
-    /* eslint-disable no-console */
-    console.log("Setting input handler for form");
-    this.$formElement.on("input", "[name='emailAddress']", function(event) {
-      var emailAddress = event.target.value;
-      var message = "";
-      if (fn(emailAddress)) {
-        event.target.setCustomValidity("");
-      } else {
-        message = emailAddress + " is not an authorized email address!";
-        event.target.setCustomValidity(message);
-      }
     });
   };
 
