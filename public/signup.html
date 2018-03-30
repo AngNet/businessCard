@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <!--<link href="payment-style.css" rel="stylesheets">-->
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../public/css/main.css" rel="stylesheet">
+  </head>
+
+  <body class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal"><a href = "index.html">WhoIAm</a></h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="login.html">Log in</a>
+      </nav>
+    </div>
+    <form data-signup="form">
+      <h1><font color="blue">Register form</font></h1>
+      <p>Required fields are followed by <strong><abbr title="required"><font color="red">*</font></abbr></strong>.</p>
+      <section>
+        <div class="form-group">
+          <label for="username">User Name </label>
+          <strong><abbr title="required"><font color="red">*</font></abbr></strong>
+          <input class="form-control" id="username" name="username" autofocus required>
+        </div>
+        <div class="form-group">
+          <label for="mail">E-mail </label>
+          <strong><abbr title="required"><font color="red">*</font></abbr></strong>
+          <input class="form-control" type="email" id="mail" name="user-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password </label>
+          <strong><abbr title="required"><font color="red">*</font></abbr></strong>
+          <input class="form-control" type="password" id="pwd" name="pw-1" required>
+        </div>
+        <div class="form-group">
+          <label for="pwd2">Confirmed Password </label>
+          <strong><abbr title="required"><font color="red">*</font></abbr></strong>
+          <input class="form-control" type="password" id="pwd2" name="pw-2" required>
+        </div>
+      </section>
+      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+
+    </form>
+    <footer class="index-footer">
+      <p>&copy; 2018 TeamPartyHouse</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/register.js" charset="utf-8"></script>
+  </body>
+
+  </html>
