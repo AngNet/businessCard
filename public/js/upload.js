@@ -54,13 +54,6 @@ dpd.pic.get(function(data, error) {
   }
 });
 
-// dpd.pic.get(function(data, statusCode, headers, config) {
-//   console.log(data);
-//     // for(var index in data) {
-//     //     appendUploadedFileToTable(data[index]);
-//     // }
-// });
-
 // var deleteFile = function(element, id) {
 //     $(element).closest('tr').remove();
 //     dpd.upload.del(id, function(data, status) {
