@@ -12,7 +12,6 @@
   var newRegSession = new Userreg("dummy_regID", remoteDS);
 
   window.newRegSession = newRegSession;
-
   var formHandler = new FormHandler(FORM_SELECTOR);
 
   //formHandler.addValidateHandler();
@@ -29,11 +28,6 @@
     }
 
     newRegSession.registerNew.call(newRegSession, data);
-
-    modalDialog = "<p>Welcome to About Me, " + data["username"] + "</p>";
-    $(modalDialog).modal();
-    //this.reset;
-
   });
 
   console.log(formHandler);

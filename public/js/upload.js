@@ -23,9 +23,6 @@ var uploadFiles = function() {
     console.log(response);
     if (this.status < 300) {
       $(".alert-success").append("Upload successful!<br />");
-      // for (var index in response) {
-      //    appendUploadedFileToTable(response[index]);
-      // }
     } else {
       alert(response.message);
     }
