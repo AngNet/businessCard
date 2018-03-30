@@ -24,5 +24,29 @@ $ dpd create aboutme-backend
 $ cd aboutme-backend
 $ dpd -d
 ```
+Dpd-fileupload module (in the aboutme-backend folder)
+```
+$ npm install deployd
+$ npm install dpd-fileupload --save
+```
+
+### Backend properties
+1st collection (aboutme):
+  -firstName
+  -lastName
+  -location
+  -occupation
+  -imgInp
+  
+ 2nd collection (needs to be a file upload collection, if you don't see any option to create a file upload collection then you didn't install the module correctly)
+   -folder name should be "upload"
+   -don't check any of the boxes
+   -save
+   
+ 3rd collection (aboutmeusers):
+   -username
+   -emailAddress
+   -pwd
+   -pwd2
 
 
