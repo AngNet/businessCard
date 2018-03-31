@@ -10,27 +10,30 @@ var uploadFiles = function() {
     fd.append("uploadedFile", files[i]);
   }
 
-  var username = $("#username").val(); //var to grab the username
-  // var subdir = $('#subdir').val();
-  // var comments = $('#comments').val();
-  // var uniqueFilename = $('#uniqueFilename').prop('checked');
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://localhost:2403/pic?username=" + username);
-  xhr.onload = function() {
-    var response = JSON.parse(this.responseText);
-    console.log(response);
-    if (this.status < 300) {
-      $(".alert-success").append("Upload successful!<br />");
+  dpd.users.get(function(data, error) {
+    if (error) {
+      alert(error.message);
     } else {
-      alert(response.message);
-    }
-  };
+      var num1 = data.length - 1;
+      var username = data[num1].username;
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://localhost:2403/pic?username=" + username);
+      xhr.onload = function() {
+        var response = JSON.parse(this.responseText);
+        console.log(response);
+        if (this.status < 300) {
+          $(".alert-success").append("Upload successful!<br />");
+        } else {
+          alert(response.message);
+        }
+      };
 
-  xhr.onerror = function(err) {
-    alert("Error: ", err);
-  };
-  xhr.send(fd);
+      xhr.onerror = function(err) {
+        alert("Error: ", err);
+      };
+      xhr.send(fd);
+    }
+  });
 };
 
 var setFiles = function(element) {
@@ -50,6 +53,25 @@ dpd.pic.get(function(data, error) {
     console.log(data);
   }
 });
+
+// dpd.users.get(function(data, error) {
+//   if (error) {
+//     alert(error.message);
+//   } else {
+//     var num1 = data.length - 1;
+//     console.log(data[num1]);
+//     dpd.aboutme.get(function(result, error) {
+//       if (error) {
+//         alert(error.message);
+//       } else {
+//         var num2 = result.length - 1;
+//         //result[num2].username = data[num1].username;
+//         //console.log(result[num2]);
+//         console.log(result);
+//       }
+//     });
+//   }
+// });
 
 
 // var deleteFile = function(element, id) {

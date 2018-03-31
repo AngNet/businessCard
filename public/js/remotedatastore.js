@@ -14,7 +14,22 @@
     $.post(this.serverUrl, val, function(serverResponse) {
       /* eslint-disable no-console */
       console.log(serverResponse);
-      
+      // dpd.users.get(function(data, error) {
+      //   if (error) {
+      //     alert(error.message);
+      //   } else {
+      //     var num1 = data.length - 1;
+      //     dpd.aboutme.get(function(result, error) {
+      //       if (error) {
+      //         alert(error.message);
+      //       } else {
+      //         var num2 = result.length - 1;
+      //         result[num2].username = data[num1].username;
+      //         console.log(result[num2]);
+      //       }
+      //     });
+      //   }
+      // });
     });
   };
 
