@@ -1,7 +1,7 @@
 (function(window) {
   "use strict";
   var FORM_SELECTOR = "[data-signup='form']";
-  var SERVER_URL = "http://localhost:2403/register";
+  var SERVER_URL = "http://localhost:2403/users";
   var App = window.App;
   var Userreg = App.Userreg;
   var userRemoteDataStore = App.userRemoteDataStore;
@@ -17,14 +17,12 @@
     var modalDialog;
 
     //check passwords matched
-    if (data.pwd != data.pwd2) {
+    if (data.password != data.password2) {
       modalDialog = "<p>Password not matched. Please re-enter password.</p>";
       $(modalDialog).modal();
       return;
     }
     newRegSession.registerNew.call(newRegSession, data);
   });
-
-  console.log(userFormHandler);
 
 })(window);

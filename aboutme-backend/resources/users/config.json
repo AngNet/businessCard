@@ -1,0 +1,21 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"password2": {
+			"name": "password2",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "password2",
+			"order": 0
+		},
+		"emailAddress": {
+			"name": "emailAddress",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "emailAddress",
+			"order": 1
+		}
+	}
+}

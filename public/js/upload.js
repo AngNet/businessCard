@@ -11,7 +11,6 @@ var uploadFiles = function() {
   }
 
   var username = $("#username").val(); //var to grab the username
-
   // var subdir = $('#subdir').val();
   // var comments = $('#comments').val();
   // var uniqueFilename = $('#uniqueFilename').prop('checked');
@@ -27,6 +26,7 @@ var uploadFiles = function() {
       alert(response.message);
     }
   };
+
   xhr.onerror = function(err) {
     alert("Error: ", err);
   };
@@ -51,6 +51,13 @@ dpd.pic.get(function(data, error) {
   }
 });
 
+dpd.users.me(function(data, error) {
+  if (error) {
+    alert(error.message);
+  } else {
+    console.log(data);
+  }
+});
 
 
 // var deleteFile = function(element, id) {

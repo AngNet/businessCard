@@ -14,6 +14,7 @@
     $.post(this.serverUrl, val, function(serverResponse) {
       /* eslint-disable no-console */
       console.log(serverResponse);
+      
     });
   };
 
