@@ -19,14 +19,14 @@
   <section>
     <div class="panel panel-default">
       <div class="panel-body">
-        <form data-login="form">
+        <form data-signup="form">
           <div class="form-group">
-            <input class="form-control" type="username" name="usernameInput" id="usernameInput" value="" placeholder="username" autofocus>
+            <input class="form-control" type="username" name="usernameInput" id="username" value="" placeholder="username" autofocus>
           </div>
           <div class="form-group">
-            <input class="form-control" name="password" placeholder="password" id="userPassword">
+            <input class="form-control" type="password" name="password" placeholder="password" id="password">
           </div>
-          <button type="submit" class="btn btn-default" onclick="location.href='index.html'">Submit</button>
+          <button type="submit" class="btn btn-default" onclick="location.href='form.html'">Submit</button>
           <button type="forgotpassword" class="btn btn-default" onclick="location.href='forgetpassword.html'">Forgot Password</button>
         </form>
       </div>
@@ -40,12 +40,38 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <script type="text/javascript" src="http://localhost:2403/dpd.js"></script>
   <script src="js/userformhandler.js" charset="utf-8"></script>
   <script src="js/userremotedatastore.js" charset="utf-8"></script>
   <script src="js/datastore.js" charset="utf-8"></script>
   <script src="js/userreg.js" charset="utf-8"></script>
   <script src="js/userMain.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    dpd.users.me(function(user) {
+      if (user) {
+        // replace with welcome page
+        location.href = "form.html";
+      }
+    });
+    $('form').submit(function() {
+      var username = $('#username').val();
+      var password = $('#password').val();
+      dpd.users.login({
+        username: username,
+        password: password
+      }, function(session, error) {
+        if (error) {
+          alert(error.message);
+        } else {
+          // replace with welcome page
+          location.href = "/form.html";
+        }
+      });
+      return false;
+    });
+  </script>
 </body>
 
 </html>

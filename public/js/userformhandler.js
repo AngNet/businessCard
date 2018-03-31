@@ -59,7 +59,7 @@
       var modalDialog;
 
       //check passwords matched
-      if (data["pwd"] != data["pwd2"]) {
+      if (data["password"] != data["password2"]) {
         modalDialog = "<p>Password not matched. Please re-enter password.</p>";
         $(modalDialog).modal();
         return;
