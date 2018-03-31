@@ -51,6 +51,8 @@ dpd.pic.get(function(data, error) {
   }
 });
 
+
+
 // var deleteFile = function(element, id) {
 //     $(element).closest('tr').remove();
 //     dpd.upload.del(id, function(data, status) {
