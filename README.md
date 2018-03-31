@@ -43,7 +43,7 @@ $ npm install dpd-fileupload --save
    -don't check any of the boxes
    -save
    
- 3rd collection (aboutmeusers):
+ 3rd collection (register):
    -username
    -emailAddress
    -pwd
