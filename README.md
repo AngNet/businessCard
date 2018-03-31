@@ -18,35 +18,32 @@ $ sudo systemctl disable mongodb
 $ npm install deployd-cli -g
 ```
 
-Creating Deployd app for this project
+Creating Deployd app and download dpd-fileupload module
 ```
 $ dpd create aboutme-backend
 $ cd aboutme-backend
-$ dpd -d
-```
-Dpd-fileupload module (in the aboutme-backend folder)
-```
 $ npm install deployd
 $ npm install dpd-fileupload --save
+$ dpd -d
 ```
 
 ### Backend properties
-1st collection (aboutme):
-  -firstName
-  -lastName
-  -location
-  -occupation
-  -imgInp
+1st collection (name aboutme):
+  1. firstName
+  2. lastName
+  3. location
+  4. occupation
+  5. imgInp
   
- 2nd collection (needs to be a file upload collection, if you don't see any option to create a file upload collection then you didn't install the module correctly)
-   -folder name should be "upload"
-   -don't check any of the boxes
-   -save
+ 2nd file upload collection (needs to be a file upload collection, if you don't see any option to create a file upload collection then you didn't install the module correctly)
+   1. folder name should be "upload"
+   2. don't check any of the boxes
+   3. save
    
- 3rd collection (register):
-   -username
-   -emailAddress
-   -pwd
-   -pwd2
+ 3rd user collection (user):
+   1. username
+   2. emailAddress
+   3. password
+   4. password2
 
 
