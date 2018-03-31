@@ -7,14 +7,17 @@
   var RemoteDataStore = App.RemoteDataStore;
   var FormHandler = App.FormHandler;
 
+  var getUser = App.getUser;
+  var username = new getUser("http://localhost:2403/register");
+
   var remoteDS = new RemoteDataStore(SERVER_URL);
   var myUser = new User(remoteDS);
   window.myUser = myUser;
-
   var formHandler = new FormHandler(FORM_SELECTOR);
 
   formHandler.addSubmitHandler(function(data) {
     myUser.createOrder.call(myUser, data);
+    username.getUserPage();
   });
 
 })(window);

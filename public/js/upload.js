@@ -51,14 +51,6 @@ dpd.pic.get(function(data, error) {
   }
 });
 
-dpd.users.me(function(data, error) {
-  if (error) {
-    alert(error.message);
-  } else {
-    console.log(data);
-  }
-});
-
 
 // var deleteFile = function(element, id) {
 //     $(element).closest('tr').remove();
