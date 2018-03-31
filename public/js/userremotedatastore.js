@@ -78,10 +78,6 @@
   };
 
   userRemoteDataStore.prototype.remove = function(key) {
-    /*$.ajax(this.serverUrl + "/" + key, {
-      type: "DELETE"
-    });*/
-
     $.ajax({
       method: "GET",
       url: this.serverUrl,

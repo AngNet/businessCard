@@ -9,7 +9,7 @@ var uploadFiles = function() {
   for (var i in files) {
     fd.append("uploadedFile", files[i]);
   }
-
+  /* eslint-disable no-undef */
   dpd.users.get(function(data, error) {
     if (error) {
       alert(error.message);
@@ -27,7 +27,6 @@ var uploadFiles = function() {
           alert(response.message);
         }
       };
-
       xhr.onerror = function(err) {
         alert("Error: ", err);
       };
@@ -52,6 +51,22 @@ dpd.pic.get(function(data, error) {
   } else {
     console.log(data);
   }
+});
+
+//Function to preview the image
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $("#blah").attr("src", e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#imgInp").change(function(){
+  readURL(this);
 });
 
 // dpd.users.get(function(data, error) {

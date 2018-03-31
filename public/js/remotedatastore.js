@@ -9,27 +9,29 @@
     }
     this.serverUrl = url;
   }
-
+  /* eslint-disable no-undef */
   RemoteDataStore.prototype.add = function(key, val) {
     $.post(this.serverUrl, val, function(serverResponse) {
       /* eslint-disable no-console */
       console.log(serverResponse);
-      // dpd.users.get(function(data, error) {
-      //   if (error) {
-      //     alert(error.message);
-      //   } else {
-      //     var num1 = data.length - 1;
-      //     dpd.aboutme.get(function(result, error) {
-      //       if (error) {
-      //         alert(error.message);
-      //       } else {
-      //         var num2 = result.length - 1;
-      //         result[num2].username = data[num1].username;
-      //         console.log(result[num2]);
-      //       }
-      //     });
-      //   }
-      // });
+      dpd.users.get(function(data, error) {
+        if (error) {
+          alert(error.message);
+        } else {
+          var num1 = data.length - 1;
+          dpd.aboutme.get(function(result, error) {
+            if (error) {
+              alert(error.message);
+            } else {
+              var num2 = result.length - 1;
+              var getUser = data[num1].username;
+              dpd.aboutme.put(
+                {id: result[num2].id},
+                {username: getUser});
+            }
+          });
+        }
+      });
     });
   };
 
